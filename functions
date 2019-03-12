@@ -25,7 +25,7 @@ int takeElem2(stack **top, int *a)
 	return 0;
 }
 
-stack *input(stack *top) //ввод с клавиатуры
+stack *input(stack *top) //простой ввод с клавиатуры
 {
 	for (int i = 5; i; i--)
 	{
