@@ -36,3 +36,18 @@ stack *input(stack *top) //ввод с клавиатуры
 	}
 	return top;
 }
+
+void showStack(stack *top) // показать последовательность без изменения стека (аналогично вводу)
+{
+	stack *bottom = NULL;
+	for (stack *r = top; r!= NULL; r = r->next)
+	{
+		stack *curr = new stack;
+		curr->e = r->e;
+		curr->next = bottom;
+		bottom = curr;
+	}
+	for (stack *r = bottom; r != NULL; r = r->next)
+		printf_s("%d ", r->e);
+}
+
