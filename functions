@@ -24,3 +24,15 @@ int takeElem2(stack **top, int *a)
 	delete del;
 	return 0;
 }
+
+stack *input(stack *top) //ввод с клавиатуры
+{
+	for (int i = 5; i; i--)
+	{
+		stack *curr = new stack;
+		scanf_s("%d", &curr->e);
+		curr->next = top;
+		top = curr;
+	}
+	return top;
+}
