@@ -37,7 +37,7 @@ stack *input(stack *top) //простой ввод с клавиатуры
 	return top;
 }
 
-void showStack(stack *top) // показать последовательность без изменения стека (аналогично вводу)
+void showStack(stack *top) // показать исходную последовательность без изменения стека
 {
 	stack *bottom = NULL;
 	for (stack *r = top; r!= NULL; r = r->next)
