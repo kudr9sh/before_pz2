@@ -1,0 +1,26 @@
+int check(stack *top)
+{
+	return (top == NULL)?2:0;
+}
+
+int takeElem1(stack **top, stack **elem)
+{
+	if (*top == NULL)
+		return 2;
+	stack *del = *top;
+	(*elem)->e = (*top)->e;
+	*top = (*top)->next;
+	delete del;
+	return 0;
+}
+
+int takeElem2(stack **top, int *a)
+{
+	if (*top == NULL)
+		return 2;
+	stack *del = *top;
+	*a = (*top)->e;
+	*top = (*top)->next;
+	delete del;
+	return 0;
+}
